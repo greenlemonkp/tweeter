@@ -1,99 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Meta Information -->
+    <title>Tweeter - Welcome</title>
 
-<head>
-  <!-- Meta Information -->
-  <title>Tweeter - Welcome</title>
+    <!-- External CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    type="text/css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap"
-    rel="stylesheet">
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
-  <!-- App CSS -->
-  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+    <!-- External JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!-- App JS -->
 
-
-
-
-  <!-- External JS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-  <!-- App JS -->
-  
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+    ></script>
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+      integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
 
-</head>
+  <body>
+    <!-- Top nav bar (fixed) -->
+    <nav class="navbar">
+      <span class="navbar-logo">tweeter</span>
+      <span class="navbar-menu">
+        <p><b>Write</b> a new Tweet</p>
+        <i class="fa-solid fa-angles-down"></i>
+      </span>
+    </nav>
 
-<body>
-  <!-- Top nav bar (fixed) -->
-  <nav class="navbar">
-    <span class="navbar-logo">tweeter</span>
-    <span class="navbar-menu">
-      <p><b>Write</b> a new Tweet</p>
-      <i class="fa-solid fa-angles-down"></i>
+    <div class="main-area">
+      <div class="site-header-container">
+        <header id="site-header">
+          <img src="/images/hacker-2.png" width="128px" height="128px" />
+          <!-- //<a href="https://www.flaticon.com/free-icons/hacker" title="hacker icons">Hacker icons created by Freepik - Flaticon</a>    // -->
 
-    </span>
-  </nav>
-
-  <div class="main-area">
-  <div class="site-header-container">
-  <header id="site-header">
-      <img src="/images/hacker-2.png" width="128px" height="128px">
-      <!-- //<a href="https://www.flaticon.com/free-icons/hacker" title="hacker icons">Hacker icons created by Freepik - Flaticon</a>    // -->
-      
-      <h3>Joon Lee</h3>
-      
-  </header>
-</div>
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
-      <div id="error-short">
-          Tweet is empty!
+          <h3>Joon Lee</h3>
+        </header>
       </div>
-      <div id="error-over">
-          You have too many characters!
-      </div>
-      <form id="request" method="POST" action="/tweets">
-        <!-- <div class="first-part"> -->
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-      <!-- </div> -->
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <div id="error-short">Tweet is empty!</div>
+          <div id="error-over">You have too many characters!</div>
+          <form id="request" method="POST" action="/tweets">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
 
-        <!-- <div class="second-part"> -->
-          <div class="wrapup">
-          <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        <!-- </div> -->
-      </form>
-    </section>
+            <div class="wrapup">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text"
+                >140</output
+              >
+            </div>
+          </form>
+        </section>
 
-    <section id="tweets-container">
- <!-- //tweet container// -->
-      
-    </section>
-
-
-
-    
-  </main>
-  </div>
-</body>
-
+        <section id="tweets-container">
+          <!-- //tweet container// -->
+        </section>
+      </main>
+    </div>
+  </body>
 </html>

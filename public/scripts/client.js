@@ -6,7 +6,6 @@
 
 // Raw data taken from initial-tweets.json
 
-
 $(document).ready(function () {
   const renderTweets = (tweets) => {
     // loops through tweets
@@ -22,9 +21,9 @@ $(document).ready(function () {
     let $tweet = $(`<article>
   <header class="tweet-header">
        
-  <span style="padding: 2%"><img src="${escape(tweetData.user.avatars)}">${
-      escape(tweetData.user.name)
-    }</span> 
+  <span style="padding: 2%"><img src="${escape(
+    tweetData.user.avatars
+  )}">${escape(tweetData.user.name)}</span> 
   <span class="user-id">${escape(tweetData.user.handle)}</span>
 
 </header>
@@ -49,29 +48,30 @@ $(document).ready(function () {
     event.preventDefault();
 
     const maxCharCount = 140;
-    const inputLength = $(this).find('#tweet-text').val().length;
-
+    const inputLength = $(this).find("#tweet-text").val().length;
+    //error message slides down when no input
     if (!inputLength) {
       $("#error-short").slideDown("slow");
       $("#error-over").hide("fast");
       return;
+      //error message slides down when input is over 140
     } else if (inputLength > maxCharCount) {
       $("#error-over").slideDown("slow");
       $("#error-short").hide("fast");
       return;
-    } else{
-      $("#error-short").hide();
+    } else {
+      $("#error-short").hide(); //hides error message when correct input
       $("#error-over").hide();
 
-    const tweet = $("#request").serialize();
-    $.ajax({
-      url: "/tweets/",
-      method: "post",
-      data: tweet,
-    }).then(function (res) {
-      console.log(res);
-      loadtweets();
-    });
+      const tweet = $("#request").serialize(); //serialize
+      $.ajax({
+        url: "/tweets/",
+        method: "post",
+        data: tweet,
+      }).then(function (res) {
+        console.log(res);
+        loadtweets();
+      });
     }
   });
 
@@ -82,7 +82,7 @@ $(document).ready(function () {
     });
   };
   loadtweets();
-  
+
   //Prevent XSS attack with escape functoin
   const escape = function (str) {
     let div = document.createElement("div");
@@ -90,4 +90,3 @@ $(document).ready(function () {
     return div.innerHTML;
   };
 });
-
