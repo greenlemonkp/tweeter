@@ -4,7 +4,6 @@
   align-items: center;
   height: 120px;
   width: 100vw;
-  background-color: #4056A1;
   color: #FFFFFF;
   padding: 1.5em;
   position: fixed;
@@ -29,4 +28,10 @@
 .navbar-menu i {
   color: red;
   margin-top: -15px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .navbar {
+    background-color: bisque;
+  }
 }
