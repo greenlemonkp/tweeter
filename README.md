@@ -14,7 +14,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshot
 !["Screenshot of Desktop-screen] (https://github.com/greenlemonkp/tweeter/blob/master/docs/desktop-screen.png)
-! ["Screenshot of Mobile-screen"] (https://github.com/greenlemonkp/tweeter/blob/master/docs/mobile-screen.png)
+!["Screenshot of Mobile-screen"] (https://github.com/greenlemonkp/tweeter/blob/master/docs/mobile-screen.png)
 
 ## Dependencies
 
