@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -28,20 +30,19 @@ body {
 #request {
   display: flex;
   flex-direction: column;
-  width: 100%
+  width: 100%;
 }
 
 .wrapup {
   display: flex;
   justify-content: space-between;
-  width: 100%
+  width: 100%;
 }
 
 .first-part {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-
 }
 
 .second-part {
@@ -58,40 +59,40 @@ body {
 }
 
 /* --DESKTOP Display-- */
- @media only screen and (min-width: 1024px) {
-
+@media only screen and (min-width: 1024px) {
   main.container {
     width: 100%;
     margin: 4em 2em 3em 1.5em;
   }
-  
+
   .main-area {
-  display: flex;
-  flex-direction: row;
-  width: 100%; 
-  margin: 1em auto;
- }  
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 1em auto;
+  }
 
   section.new-tweet {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 50px
+    margin-top: 50px;
   }
   #tweets-container {
     display: flex;
     flex-direction: row;
   }
- 
- 
 
- .site-header-container {
-  width: 50%;
- }
+  .site-header-container {
+    width: 50%;
+  }
 
   #site-header {
     width: 70%;
     padding: 5px;
   }
-}
 
+  .navbar {
+    background-color: #4056a1;
+  }
+}
