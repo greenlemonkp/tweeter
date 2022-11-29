@@ -12,5 +12,7 @@ $(document).ready(function () {
     } else {
       $counterElement.removeClass("short");
     }
+    $counterElement.html(charRemain);
+
   });
 });
