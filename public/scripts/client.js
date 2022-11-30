@@ -16,6 +16,20 @@ $(document).ready(function () {
     const maxCharCount = 140;
     const inputLength = $(this).find("#tweet-text").val().length;
     //error message slides down when no input
+
+    const tweet = $("#request").serialize(); //serialize
+      $.ajax({
+        url: "/tweets/",
+        method: "post",
+        data: tweet,
+      }).then(function (res) {
+        loadtweets(); 
+        //reset textarea and counter
+        $("#tweet-text").val("")
+        $(".counter").val("140")
+      });       
+
+
     if (!inputLength) {
       $("#error-short").slideDown("slow");
       $("#error-over").hide("fast");
@@ -29,17 +43,7 @@ $(document).ready(function () {
       $("#error-short").hide(); //hides error message when correct input
       $("#error-over").hide();
 
-      const tweet = $("#request").serialize(); //serialize
-      $.ajax({
-        url: "/tweets/",
-        method: "post",
-        data: tweet,
-      }).then(function (res) {
-        loadtweets(); 
-        //reset textarea and counter
-        $("#tweet-text").val(" ")
-        $(".counter").val("140")
-      });       
+      
 
 
     }
